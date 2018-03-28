@@ -1,10 +1,10 @@
 const express = require('express');
 
+const router = require('./router');
+
 const app = express();
 
-app.get('/',function (req,res) {
-    res.send('hello world');
-});
+app.use(router);
 
 app.listen(5000,function () {
     console.log('5000 running....')
